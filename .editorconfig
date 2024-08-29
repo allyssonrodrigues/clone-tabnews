@@ -1,0 +1,6 @@
+# é necessário realizar a instação do plugin do EditorConfig
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
