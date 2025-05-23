@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
+    "services:up": "podman compose -f /home/projetos/finance_system/infra/compose.yaml up -d",
+    "services:stop": "podman compose -f /home/projetos/finance_system/infra/compose.yaml stop",
+    "services:down": "podman compose -f /home/projetos/finance_system/infra/compose.yaml down",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
